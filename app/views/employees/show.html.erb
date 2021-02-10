@@ -1,8 +1,11 @@
-<h1> Employee info </h1>
+<h1> Employee info page </h1>
 
-<%= @employee.first_name %>
-<%= @employee.last_name %>
-<%= @employee.alias %>
-<%= @employee.title %>
-<%= @employee.office %>
-<%= image_tag @employee.img_url %>
+
+<img src="<%= @employee.img_url %>" height="200px" />
+
+<h3> Name: <%= @employee %></h3>
+<h3> Alias: <%= @employee.alias %></h3>
+<h3> Title: <%= @employee.title %></h3>
+<h3> Office: <%= @employee.office %></h3>
+
+<%= link_to "Edit me", edit_employee_path(@employee) %>
